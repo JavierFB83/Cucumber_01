@@ -1,10 +1,12 @@
 import { When, Then, Given } from "@badeball/cypress-cucumber-preprocessor";
-import {CommonPage} from "../Pages/commonPage";
-import {MainPage} from "../Pages/mainPage"
 
-let commonPage = new CommonPage();
+// Clases importadas
+import { MainPage } from "../Pages/mainPage"
+
+//Instancias de clase
 let mainPage = new MainPage();
 
+//Steps
 When("I type {string} on the input with placeholder {string}", (text, placeholderName) => {
   mainPage.typeSomething(text, placeholderName)
 });
